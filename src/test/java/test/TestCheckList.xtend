@@ -21,7 +21,7 @@ class TestCheckList {
 
 	@Test
 	def void testListaPendiente() {
-		Assert.assertTrue(miLista.estaPendiente())
+		Assert.assertTrue(!miLista.estaPendiente())
 	}
 	
 	@Test
