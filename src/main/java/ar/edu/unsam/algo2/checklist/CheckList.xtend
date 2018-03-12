@@ -1,4 +1,4 @@
-package ar.edu.unsam.algo2.test
+package ar.edu.unsam.algo2.checklist
 
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors

@@ -1,7 +1,7 @@
-package test
+package ar.edu.unsam.algo2.checklist
 
-import ar.edu.unsam.algo2.test.CheckList
-import ar.edu.unsam.algo2.test.Item
+import ar.edu.unsam.algo2.checklist.CheckList
+import ar.edu.unsam.algo2.checklist.Item
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
