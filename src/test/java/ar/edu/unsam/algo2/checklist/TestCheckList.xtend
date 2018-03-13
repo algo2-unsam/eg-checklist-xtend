@@ -12,7 +12,7 @@ class TestCheckList {
 	Item otroItem
 
 	@Before
-	def void initialize() {
+	def initialize() {
 		miLista = new CheckList()
 		miLista.agregarItem("Un Item")
 		otroItem = new Item("Otro item")
@@ -20,12 +20,12 @@ class TestCheckList {
 	}
 
 	@Test
-	def void testListaPendiente() {
+	def testListaPendiente() {
 		Assert.assertTrue(miLista.estaPendiente())
 	}
 	
 	@Test
-	def void testListaNoEnProgreso() {
+	def testListaNoEnProgreso() {
 		Assert.assertFalse(miLista.estaEnProgreso())
 	}
 	
@@ -50,6 +50,23 @@ class TestCheckList {
 	def void testListaCompleta() {
 		miLista.items.forEach [ it.toggleChecked() ]
 		Assert.assertTrue(miLista.estaCompleta())
+	}
+	
+	@Test
+	def testListaCeroPorciento() {
+		Assert.assertEquals(0.0, miLista.porcentajeCompletitud, 0.0)
+	}
+	
+	@Test
+	def testListaCincuentaPorciento() {
+		otroItem.toggleChecked()
+		Assert.assertEquals(50.0, miLista.porcentajeCompletitud, 0.0)
+	}
+	
+	@Test
+	def testListaCienPorciento() {
+		miLista.items.forEach [ it.toggleChecked() ]
+		Assert.assertEquals(100.0, miLista.porcentajeCompletitud, 0.0)
 	}
 
 

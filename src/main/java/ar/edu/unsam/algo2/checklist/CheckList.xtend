@@ -27,4 +27,9 @@ class CheckList {
 		items.forall [ item | item.checked ] 
 	}
 	
+	def getPorcentajeCompletitud() {
+		var cantidadHechos = (items.filter [ item | item.checked ].size()) as double
+		cantidadHechos / items.size() * 100
+	}
+	
 }
