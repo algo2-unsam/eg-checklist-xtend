@@ -12,7 +12,7 @@ class TestCheckList {
 	Item otroItem
 
 	@Before
-	def initialize() {
+	def void initialize() {
 		miLista = new CheckList()
 		miLista.agregarItem("Un Item")
 		otroItem = new Item("Otro item")
